@@ -94,15 +94,15 @@ class SensorDataService : Service(), SensorEventListener {
     private fun createNotification(): Notification {
         val channelId =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                createNotificationChannel("sensor_service", "Sensor Service")
+                createNotificationChannel("sensor_service", "Activity Monitoring")
             } else {
                 ""
             }
 
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-            .setContentTitle("Sensor Service")
+            .setContentTitle("Activity Monitoring")
             .setContentText("Running")
-            .setSmallIcon(R.mipmap.ic_launcher) // Set your notification icon here
+            .setSmallIcon(R.mipmap.ic_launcher)
 
         return notificationBuilder.build()
     }
@@ -126,8 +126,8 @@ class SensorDataService : Service(), SensorEventListener {
             sensorValueMap[sensorType] = floatValues
             val json = """
                 {
-                    "id": "${DeviceUtils.getDeviceId()}",
-                    "device_id": "${DeviceUtils.getAndroidId(this)}",
+                    "id": "${DeviceUtils.getUID()}",
+                    "device_id": "${DeviceUtils.getDeviceId(this)}",
                     "sensor_type": $sensorType,
                     "sensor_values": "${floatValues.joinToString()}"
                 }

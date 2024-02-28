@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.artemis.activitymonitoring.service.*
+import com.artemis.activitymonitoring.util.DeviceUtils
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,27 +32,13 @@ class MainActivity : AppCompatActivity() {
 
         connectionStatusTextView = findViewById(R.id.connection_status_textview)
 
-        // Check if the device is connected to the internet
-        val isConnected = isNetworkAvailable()
-
-        // Update the TextView based on the network state
-        if (isConnected) {
-            connectionStatusTextView.text = "Connected"
-        } else {
-            connectionStatusTextView.text = "Disconnected"
-        }
+        connectionStatusTextView.text = DeviceUtils.getDeviceId(this)
 
         if (!hasLocationPermissions()) {
             requestLocationPermissions()
         } else {
             startLocationDataService()
         }
-    }
-
-    private fun isNetworkAvailable(): Boolean {
-        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networkInfo = connectivityManager.activeNetworkInfo
-        return networkInfo != null && networkInfo.isConnected
     }
 
     private fun hasLocationPermissions(): Boolean {

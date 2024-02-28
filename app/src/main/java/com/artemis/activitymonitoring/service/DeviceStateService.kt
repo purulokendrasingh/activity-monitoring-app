@@ -75,8 +75,8 @@ class DeviceStateService : Service() {
     private fun sendDataToBackend(isScreenOn: Boolean) {
         val json = """
             {
-                "id": "${DeviceUtils.getDeviceId()}",
-                "device_id": "${DeviceUtils.getAndroidId(this)}",
+                "id": "${DeviceUtils.getUID()}",
+                "device_id": "${DeviceUtils.getDeviceId(this)}",
                 "is_screen_on": $isScreenOn 
             }
         """.trimIndent()

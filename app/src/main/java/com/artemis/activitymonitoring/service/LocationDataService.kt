@@ -8,11 +8,9 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
-import android.os.Bundle
 import android.os.IBinder
 import android.util.Log
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.artemis.activitymonitoring.util.DeviceUtils
 import okhttp3.OkHttpClient
 import okhttp3.*
@@ -37,7 +35,6 @@ class LocationDataService : Service() {
     override fun onCreate() {
         super.onCreate()
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
         startLocationUpdates()
     }
 
@@ -84,8 +81,8 @@ class LocationDataService : Service() {
             locationValueMap["longitude"] = longitude
             val json = """
                 {
-                    "id": "${DeviceUtils.getDeviceId()}",
-                    "device_id": "${DeviceUtils.getAndroidId(this)}",
+                    "id": "${DeviceUtils.getUID()}",
+                    "device_id": "${DeviceUtils.getDeviceId(this)}",
                     "latitude": $latitude,
                     "longitude": $longitude
                 }

@@ -7,11 +7,11 @@ import java.util.UUID
 
 object DeviceUtils {
     @SuppressLint("HardwareIds")
-    fun getAndroidId(context: Context): String {
+    fun getDeviceId(context: Context): String {
         return Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
     }
 
-    fun getDeviceId(): UUID {
+    fun getUID(): UUID {
         return UUID.randomUUID()
     }
 }

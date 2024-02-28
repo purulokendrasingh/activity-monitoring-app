@@ -6,10 +6,7 @@ import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
-import android.os.Handler
 import android.os.IBinder
-import android.os.Looper
-import android.telecom.Call
 import android.util.Log
 import com.artemis.activitymonitoring.util.DeviceUtils
 import okhttp3.*
@@ -66,11 +63,11 @@ class NetworkDataService : Service() {
     private fun sendNetworkDataToBackend() {
         val json = """
             {
-                "id": "${DeviceUtils.getDeviceId()}",
-                "device_id": "${DeviceUtils.getAndroidId(this)}",
+                "id": "${DeviceUtils.getUID()}",
+                "device_id": "${DeviceUtils.getDeviceId(this)}",
                 "is_network_available": ${isNetworkAvailable()},
-                 "is_wifi_connected": ${isConnectedViaWiFi()},
-                 "is_mobile_data_connected": ${isConnectedViaMobileData()}
+                "is_wifi_connected": ${isConnectedViaWiFi()},
+                "is_mobile_data_connected": ${isConnectedViaMobileData()}
             }
         """.trimIndent()
         val requestBody = json.toRequestBody("application/json".toMediaTypeOrNull())

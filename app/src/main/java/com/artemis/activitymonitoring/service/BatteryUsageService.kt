@@ -58,8 +58,8 @@ class BatteryUsageService : Service() {
     private fun sendBatteryInfoToBackend(batteryPercentage: Float, voltage: Int, temperature: Int, plugged: Int) {
         val json = """
             {
-                "id": "${DeviceUtils.getDeviceId()}",
-                "device_id": "${DeviceUtils.getAndroidId(this)}", 
+                "id": "${DeviceUtils.getUID()}",
+                "device_id": "${DeviceUtils.getDeviceId(this)}", 
                 "battery_percentage": $batteryPercentage,
                 "voltage": $voltage,
                 "temperature": $temperature,
