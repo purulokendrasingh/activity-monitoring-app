@@ -12,6 +12,11 @@ Develop a comprehensive sensor and activity monitoring system for child Android 
 ## Overview
 The Advanced Sensor and Activity Monitoring System is a cutting-edge solution designed to provide real-time insights into various aspects of device behavior and user interactions on Android devices. By leveraging advanced sensor technologies, comprehensive backend APIs, and intuitive frontend visualization, the system empowers users to gain actionable insights and optimize their device usage patterns. This documentation offers an extensive overview of both the Android application and the backend system, covering functionalities, implementation details, deployment processes, and integration methods.
 
+(Flow diagram for the complete architecture)
+
+![WhatsApp Image 2024-02-27 at 21 35 12_91f09d82](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/6f9be043-c9c7-4728-8889-0fc2dbd734eb)
+
+
 ## Android App
 
 ### Features
