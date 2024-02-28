@@ -28,6 +28,7 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 - A foreground service with a persistent notification ensures that the app and background services remain active and operational, providing users with uninterrupted monitoring capabilities.
 
 (The folder structure for the app code)
+
 ![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/361f8d72-7274-483b-8857-536f53b51343)
 
 
@@ -35,9 +36,11 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 - Rigorous testing has been conducted on the app, specifically targeting compatibility and functionality on Android version 11 (version R) using a Pixel 3 phone emulator.
 
 (The app screen just shows the Device ID which needs to be noted down and used while querying the frontend dashboard for activity logs)
+
 ![app-snip-2](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/f9c4dac0-ccb7-4c15-b3b0-a740785f43ca)
 
 (The app runs a foreground service which ensure the app runs even after the user has closed it by showing notification banner)
+
 ![app-snip-3](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/459019a0-798e-4f88-b9b9-f02593aed6d9)
   
 
@@ -48,10 +51,23 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 - Separate controller files have been implemented for each service to handle request routing and data processing logic, ensuring modularity and maintainability.
 - Azure Cosmos DB serves as the primary data storage solution, with separate containers partitioned based on the device ID for efficient data organization and retrieval.
 - Azure App Configuration is utilized to manage sensitive data and access keys, ensuring secure access to backend resources.
-- Used POSTMAN to test the backend APIs.
+
+(Used POSTMAN to test the backend APIs)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/6c95d526-ec41-4045-85a3-3e45136c2f83)
 
 (The folder structure for the Flask App)
+
 ![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/f4e8a0b7-ff10-4ff4-b033-9e14d7ede27a)
+
+(The CosmosDB and service specific containers)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/c3fcddcb-a584-4c71-981a-233b0830a708)
+
+(Azure App Configuration to ensure sensitive access keys and information)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/94b5107d-abbb-42f0-ac4e-876c50e37d0c)
+
 
 
 ### Deployment Process
@@ -59,7 +75,37 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 - Docker images are pushed to Azure Container Registry, and containers are provisioned on Azure App Service for reliable and scalable deployment.
 - Continuous integration and continuous deployment (CI/CD) pipelines may be implemented to automate the deployment process and streamline development workflows.
 
+(Docker images on the Docker-Hub)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/f30b0459-ee8e-4808-9dfe-74d78077319c)
+
+
 ### Frontend Integration
 - The frontend dashboard, built using React, offers an intuitive user interface for visualizing collected data.
 - Separate routes are available for each service, facilitating easy navigation and access to specific data sets.
 - Search functionality enables users to input device IDs and retrieve corresponding data using the fetch_records API, with pagination implemented to optimize data retrieval and display.
+
+(Frontend React App folder structure)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/1e14f83e-bf15-4b30-9103-2b85fc3d9269)
+
+(Dashboard View)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/4f02b442-3e16-4018-ba86-5205628d04c9)
+
+(Sensor Data View for a specific Device ID)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/ef71d2cd-b4f1-46f7-a236-f4e92c67e25a)
+
+(Location Data View for a specific Device ID)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/9fb95b69-532c-4c51-b2dc-bce074517140)
+
+(Connectivity Data View for a specific Device ID)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/96f88d76-bbd4-472d-a506-01dfad2d6206)
+
+(Battery Usage View for a specific Device ID)
+
+![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/aded23dc-b009-4a50-9d3b-81f848df2412)
+
