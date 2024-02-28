@@ -4,8 +4,10 @@
 
 Develop a comprehensive sensor and activity monitoring system for child Android devices, aiming to provide real-time insights into user behavior, app usage, and environmental context. Utilize device sensors, power management, usage statistics, battery information, location data, network connectivity, and additional data collection to capture diverse user interactions. Additionally, implement data attributes for accessibility events to enhance data granularity.
 
-### Project Timeline:
-The project is set to be completed within a two-week timeframe, starting from Feb 13th, 2024 to 27th, 2024.
+  ```
+  Project Timeline:
+  The project is set to be completed within a two-week timeframe, starting from Feb 13th, 2024 to 27th, 2024.
+  ```
 
 ## Overview
 The Advanced Sensor and Activity Monitoring System is a cutting-edge solution designed to provide real-time insights into various aspects of device behavior and user interactions on Android devices. By leveraging advanced sensor technologies, comprehensive backend APIs, and intuitive frontend visualization, the system empowers users to gain actionable insights and optimize their device usage patterns. This documentation offers an extensive overview of both the Android application and the backend system, covering functionalities, implementation details, deployment processes, and integration methods.
