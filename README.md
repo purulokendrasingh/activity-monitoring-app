@@ -59,6 +59,9 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 - Azure Cosmos DB serves as the primary data storage solution, with separate containers partitioned based on the device ID for efficient data organization and retrieval.
 - Azure App Configuration is utilized to manage sensitive data and access keys, ensuring secure access to backend resources.
 
+
+Link to the Backend (Flask) Repository: https://github.com/purulokendrasingh/activity-monitoring-dashboard
+
 (Used POSTMAN to test the backend APIs)
 
 ![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/6c95d526-ec41-4045-85a3-3e45136c2f83)
@@ -92,6 +95,8 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 - Separate routes are available for each service, facilitating easy navigation and access to specific data sets.
 - Search functionality enables users to input device IDs and retrieve corresponding data using the fetch_records API, with pagination implemented to optimize data retrieval and display.
 
+Link to the Frontend (React) Repository: https://github.com/purulokendrasingh/activity-monitoring-fe
+
 (Frontend React App folder structure)
 
 ![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/1e14f83e-bf15-4b30-9103-2b85fc3d9269)
@@ -115,4 +120,5 @@ The Advanced Sensor and Activity Monitoring System is a cutting-edge solution de
 (Battery Usage View for a specific Device ID)
 
 ![image](https://github.com/purulokendrasingh/activity-monitoring-app/assets/29207426/aded23dc-b009-4a50-9d3b-81f848df2412)
+
 
