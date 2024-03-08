@@ -1,5 +1,4 @@
 # Activity Monitoring App
-Comprehensive sensor and activity monitoring system leveraging Android Kotlin app, React dashboard, Flask APIs, and Azure Cosmos DB integration for real-time insights into user behavior and device interactions
 
 ## Problem Statement
 
