@@ -77,7 +77,7 @@ Link to the Backend (Flask) Repository: https://github.com/purulokendrasingh/act
 
 ### Deployment Process
 - Docker containers are employed for seamless deployment on Azure App Service, providing scalability and portability across different environments.
-- Docker images are pushed to Azure Container Registry, and containers are provisioned on Azure App Service for reliable and scalable deployment.
+- Docker images are pushed to DockerHub, and containers are provisioned on Azure App Service for reliable and scalable deployment.
 - Continuous integration and continuous deployment (CI/CD) pipelines may be implemented to automate the deployment process and streamline development workflows.
 
 (Docker images on the Docker-Hub)
